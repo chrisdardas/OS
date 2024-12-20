@@ -33,7 +33,7 @@ int main(int argc, char* argv[])
         read(fd[0], &size_msg, sizeof(size_msg));
         read(fd[0], message, size_msg);
         printf("Message from parent: %s\n", message);
-        close(fd[1]);
+        close(fd[0]);
     }
 
     else
