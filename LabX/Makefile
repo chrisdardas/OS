@@ -1,6 +1,6 @@
 CC = gcc
 
-CFLAGS = -Wall -g
+CFLAGS = -Wall -Wextra -g
 
 SRC = fork.c pipe.c kill.c writeFile.c sum.c
 
@@ -21,7 +21,7 @@ kill_test: kill.c
 write_file_test: writeFile.c
 	$(CC) $(CFLAGS) $^ -o $@
 
-sum : sum.c
+sum: sum.c
 	$(CC) $(CFLAGS) $^ -o $@
 
 .PHONY: clean
